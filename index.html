@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentación | Mineria de Datos</title>
-    <!-- Tailwind css -->
+    <title>Documentación | Minería de Datos</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Habilitar el modo oscuro basado en clases
+        };
+    </script>
 </head>
-<body class="bg-gray-100">
-    <nav class="bg-white shadow-md">
+
+<body class="bg-gray-100 dark:bg-gray-900 dark:text-gray-100">
+    <nav class="bg-white dark:bg-gray-800 shadow-md">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Titulo logo -->
-                 <a href="/" class="text-xl font-bold text-sky-700">MiningData</a>
-                <!-- Nav -->
-                <div class="hidden md:flex space-x-6">
-                    <a href="/" class="text-gray-700 hover:text-blue-600">Inicio</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600">Documentación</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600">Comparativa</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600">Videos</a>
+                <!-- Título logo -->
+                <a href="/" class="text-xl font-bold text-slate-600 dark:text-slate-200">DataMining</a>
+                <!-- Navegación -->
+                <div class="hidden md:flex space-x-7 items-center">
+                    <a href="/" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Inicio</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Documentación</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Comparativa</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Videos</a>
+                    <!-- Botón para alternar modo oscuro -->
+                    <button id="dark-mode-toggle"
+                        class="ml-4 w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 shadow-lg hover:scale-110 transition-all duration-300 focus:outline-none ">
+                        <span id="dark-mode-icon" class="text-gray-700 dark:text-gray-300 text-lg">🌙</span>
+                    </button>
                 </div>
-                <!-- Boton Menu celular-->
+                <!-- Botón menú móvil -->
                 <div class="md:hidden">
-                    <button id="menu-button" class="text-gray-800 focus:outline-none">
+                    <button id="menu-button" class="text-gray-800 dark:text-gray-300 focus:outline-none">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -30,22 +42,28 @@
                     </button>
                 </div>
             </div>
-        </div><!--.container-->
-        <!-- Menu desplegable -->
-        <div id="mobile-menu" class="md:hidden hidden">
-            <a href="/" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Inicio</a>
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Documentación</a>
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Comparativa</a>
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Videos</a>
-
+        </div>
+        <!-- Menú desplegable móvil -->
+        <div id="mobile-menu" class="md:hidden hidden dark:bg-gray-800">
+            <a href="/"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700">Inicio</a>
+            <a href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700">Documentación</a>
+            <a href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700">Comparativa</a>
+            <a href="#"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700">Videos</a>
         </div>
     </nav>
-    <!-- Seccion Informacion -->
+    <!-- Sección Información -->
     <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center md:mb-0">Bienvenido a la plataforma Educativa MiningData.</h1>
-        <p class="text-gray-500 text-center mt-1">Aprenderas conceptos claves, herramientas y obtendras acceso a recursos como apoyo </p>
+        <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center md:mb-0">Bienvenido a la
+            plataforma Educativa DataMining.</h1>
+        <p class="text-gray-500 dark:text-gray-400 text-center mt-1">Aprenderás conceptos claves, herramientas y
+            obtendrás acceso a recursos como apoyo.</p>
     </div>
-    <!-- Script -->
+    <!-- Script para alternar modo oscuro -->
     <script src="js/app.js"></script>
 </body>
+
 </html>
