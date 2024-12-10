@@ -10,8 +10,41 @@ const darkModeToggle = document.getElementById('dark-mode-toggle');
 const htmlElement = document.documentElement;
 const darkModeIcon = document.getElementById('dark-mode-icon');
 
-// Alternar clase 'dark' en el elemento raíz
-darkModeToggle.addEventListener('click', () => {
+function initializeTheme() {
+    const userPreference = localStorage.getItem('theme');
+    const systemPreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (userPreference) {
+        htmlElement.classList.toggle('dark', userPreference === 'dark');
+    } else {
+        htmlElement.classList.toggle('dark', systemPreference);
+    }
+
+    updateIcon();
+}
+// Cambiar tema manualmente y guardar en localStorage
+function toggleTheme() {
     const isDarkMode = htmlElement.classList.toggle('dark');
-    darkModeIcon.textContent = isDarkMode ? '☀️' : '🌙'; // Cambiar ícono
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    updateIcon();
+}
+
+// Actualizar ícono según el tema actual
+function updateIcon() {
+    const isDarkMode = htmlElement.classList.contains('dark');
+    darkModeIcon.textContent = isDarkMode ? '☀️' : '🌙';
+}
+
+// Event Listener para el botón
+darkModeToggle.addEventListener('click', toggleTheme);
+
+// Detectar cambios en la preferencia del sistema
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+    if (!localStorage.getItem('theme')) {
+    htmlElement.classList.toggle('dark', event.matches);
+    updateIcon();
+    }
 });
+
+// Inicializar tema
+initializeTheme();
