@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -117,10 +116,11 @@
       <h2
         class="text-2xl font-bold mt-5 text-center bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-red-400"
       >
-        ¿Qué es la Mineria de Datos?
+        ¿Qué es la Minería de Datos?
       </h2>
-      <div class="mt-5">
-        <p>
+      <!--que es mineria -->
+      <div class="mt-5 flex justify-center">
+        <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
           La minería de datos es una técnica muy poderosa que se utiliza para
           <span class="text-blue-400 font-bold"
             >extraer información valiosa y oculta</span
@@ -129,9 +129,115 @@
           montaña de arena, pero en lugar de oro, encontramos patrones,
           tendencias y relaciones que pueden ser muy útiles para tomar
           decisiones.
+          <br />
+          <br />
+          La minería de datos basicamente nos permite:
+          <br />
+          <br />
         </p>
       </div>
-    </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Tarjeta 1 -->
+        <div class="bg-slate-300 rounded-lg p-6 shadow-md text-center">
+          <div class="flex justify-center items-center mb-4">
+            <!-- Ícono -->
+            <svg
+              data-testid="geist-icon"
+              height="26"
+              stroke-linejoin="round"
+              viewBox="0 0 16 16"
+              width="26"
+              style="color: black"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3 1C1.61929 1 0.5 2.11929 0.5 3.5V5C0.5 6.38071 1.61929 7.5 3 7.5H6.49635C6.69847 7.12614 6.95418 6.82913 7.18722 6.61199C7.45631 6.36128 7.74998 6.16091 8.04058 6H3C2.44772 6 2 5.55229 2 5V3.5C2 2.94772 2.44772 2.5 3 2.5H13C13.5523 2.5 14 2.94772 14 3.5V5C14 5.10489 13.9838 5.20601 13.9539 5.30101C14.4395 5.39332 14.9039 5.52262 15.3298 5.69046C15.3516 5.69906 15.3736 5.70787 15.3957 5.71688C15.4636 5.48979 15.5 5.24915 15.5 5V3.5C15.5 2.11929 14.3807 1 13 1H3ZM3 8.5H6.15941C6.13715 8.64706 6.125 8.80083 6.125 8.96121V10H3C2.44772 10 2 10.4477 2 11V12.5C2 13.0523 2.44772 13.5 3 13.5H6.125V14.0388C6.125 14.3915 6.18378 14.7122 6.27948 15H3C1.61929 15 0.5 13.8807 0.5 12.5V11C0.5 9.61929 1.61929 8.5 3 8.5ZM5 4.25C5 4.66421 4.66421 5 4.25 5C3.83579 5 3.5 4.66421 3.5 4.25C3.5 3.83579 3.83579 3.5 4.25 3.5C4.66421 3.5 5 3.83579 5 4.25ZM6.75 5C7.16421 5 7.5 4.66421 7.5 4.25C7.5 3.83579 7.16421 3.5 6.75 3.5C6.33579 3.5 6 3.83579 6 4.25C6 4.66421 6.33579 5 6.75 5ZM12.0156 7C11.0211 7 10.0922 7.15773 9.38894 7.43489C9.03916 7.57273 8.71379 7.75239 8.46539 7.98382C8.21608 8.21611 8 8.54594 8 8.96121V11.5V14.0388C8 14.4541 8.21608 14.7839 8.46539 15.0162C8.71379 15.2476 9.03916 15.4273 9.38894 15.5651C10.0922 15.8423 11.0211 16 12.0156 16C13.0101 16 13.939 15.8423 14.6423 15.5651C14.9921 15.4273 15.3175 15.2476 15.5659 15.0162C15.8152 14.7839 16.0312 14.4541 16.0312 14.0388V11.5V8.96121C16.0312 8.54594 15.8152 8.21611 15.5659 7.98382C15.3175 7.75239 14.9921 7.57273 14.6423 7.43489C13.939 7.15773 13.0101 7 12.0156 7ZM9.31751 8.89837C9.28805 8.92582 9.27043 8.94679 9.26013 8.96121C9.27043 8.97563 9.28805 8.9966 9.31751 9.02404C9.41227 9.11233 9.58344 9.22061 9.84724 9.32457C10.3711 9.53103 11.1375 9.67241 12.0156 9.67241C12.8937 9.67241 13.6601 9.53103 14.184 9.32457C14.4478 9.22061 14.619 9.11233 14.7137 9.02404C14.7432 8.9966 14.7608 8.97563 14.7711 8.96121C14.7608 8.94679 14.7432 8.92582 14.7137 8.89837C14.619 8.81008 14.4478 8.70181 14.184 8.59784C13.6601 8.39139 12.8937 8.25 12.0156 8.25C11.1375 8.25 10.3711 8.39139 9.84724 8.59784C9.58344 8.70181 9.41227 8.81008 9.31751 8.89837ZM14.6423 10.4875C14.6891 10.4691 14.7355 10.4499 14.7812 10.4299V11.4841C14.7747 11.4962 14.757 11.5225 14.7137 11.5628C14.619 11.6511 14.4478 11.7594 14.184 11.8634C13.6601 12.0698 12.8937 12.2112 12.0156 12.2112C11.1375 12.2112 10.3711 12.0698 9.84724 11.8634C9.58344 11.7594 9.41227 11.6511 9.31751 11.5628C9.27426 11.5225 9.25654 11.4962 9.25 11.4841V10.4299C9.29579 10.4499 9.34215 10.4691 9.38894 10.4875C10.0922 10.7647 11.0211 10.9224 12.0156 10.9224C13.0101 10.9224 13.939 10.7647 14.6423 10.4875ZM14.6423 13.0263C14.6891 13.0079 14.7355 12.9887 14.7812 12.9687V14.0229C14.7747 14.035 14.757 14.0613 14.7137 14.1016C14.619 14.1899 14.4478 14.2982 14.184 14.4022C13.6601 14.6086 12.8937 14.75 12.0156 14.75C11.1375 14.75 10.3711 14.6086 9.84724 14.4022C9.58344 14.2982 9.41227 14.1899 9.31751 14.1016C9.27426 14.0613 9.25654 14.035 9.25 14.0229V12.9687C9.29579 12.9887 9.34215 13.0079 9.38894 13.0263C10.0922 13.3035 11.0211 13.4612 12.0156 13.4612C13.0101 13.4612 13.939 13.3035 14.6423 13.0263ZM14.7846 14.0151C14.7847 14.0151 14.7844 14.0162 14.7834 14.0186C14.784 14.0162 14.7845 14.0151 14.7846 14.0151ZM9.24787 14.0186C9.24726 14.0162 9.24673 14.0151 9.24662 14.0151C9.24655 14.0151 9.24664 14.0155 9.24696 14.0164C9.24716 14.0169 9.24746 14.0177 9.24787 14.0186ZM14.7834 11.4798C14.784 11.4774 14.7845 11.4763 14.7846 11.4763C14.7847 11.4763 14.7844 11.4774 14.7834 11.4798ZM9.24702 11.4771C9.24682 11.4765 9.24667 11.4763 9.24662 11.4763C9.24651 11.4763 9.24681 11.4774 9.24787 11.4798C9.24755 11.4785 9.24725 11.4776 9.24702 11.4771ZM14.784 8.93882C14.7838 8.93937 14.7836 8.9401 14.7834 8.941C14.7844 8.93866 14.7847 8.93748 14.7846 8.93748C14.7846 8.93748 14.7843 8.93793 14.784 8.93882ZM9.24787 8.94099C9.24681 8.93866 9.24651 8.93748 9.24662 8.93748C9.24673 8.93748 9.24726 8.93865 9.24787 8.94099Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+          <p class="text-gray-700 font-medium">
+            Limpiar los datos de ruido y repeticiones.
+          </p>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="bg-slate-300 rounded-lg p-6 shadow-md text-center">
+          <div class="flex justify-center items-center mb-4">
+            <!-- Ícono -->
+            <svg
+              data-testid="geist-icon"
+              height="26"
+              stroke-linejoin="round"
+              viewBox="0 0 16 16"
+              width="26"
+              style="color: black"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8 14.5C11.5899 14.5 14.5 11.5899 14.5 8C14.5 4.41015 11.5899 1.5 8 1.5C4.41015 1.5 1.5 4.41015 1.5 8C1.5 11.5899 4.41015 14.5 8 14.5ZM8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM6.25 7H7H7.74999C8.30227 7 8.74999 7.44772 8.74999 8V11.5V12.25H7.24999V11.5V8.5H7H6.25V7ZM8 6C8.55229 6 9 5.55228 9 5C9 4.44772 8.55229 4 8 4C7.44772 4 7 4.44772 7 5C7 5.55228 7.44772 6 8 6Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+          <p class="text-gray-700 font-medium">
+            Extraer la información relevante y utilizarla para evaluar posibles
+            resultados.
+          </p>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="bg-slate-300 rounded-lg p-6 shadow-md text-center">
+          <div class="flex justify-center items-center mb-4">
+            <!-- Ícono -->
+            <svg
+              data-testid="geist-icon"
+              height="26"
+              stroke-linejoin="round"
+              viewBox="0 0 16 16"
+              width="26"
+              style="color: black"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.8242 3H10.0742V4.5H10.8242H13.4382L8.49989 9.43829L6.207 7.14629C5.81645 6.75589 5.18339 6.75595 4.79292 7.14642L0.719662 11.2197L0.189331 11.75L1.24999 12.8107L1.78032 12.2803L5.50009 8.56057L7.79298 10.8526C8.18353 11.243 8.81659 11.2429 9.20706 10.8524L14.4988 5.56066V8.17462V8.92462H15.9988V8.17462V4C15.9988 3.44772 15.5511 3 14.9988 3H10.8242Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+          <p class="text-gray-700 font-medium">
+            Tomar mejores decisiones de negocio con mayor rapidez.
+          </p>
+        </div>
+      </div>
+      <h2
+        class="text-2xl font-bold mt-5 text-center bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-red-400"
+      >
+        Conceptos Básicos
+      </h2>
+      <div class="mt-5 flex justify-center">
+        <p class="text-lg text-gray-700 dark:text-gray-300">
+          Para entender la minería de datos, es importante conocer algunos
+          conceptos básicos:
+          <br />
+          <br />
+        </p>
+      </div>
+      <ol class="list-disc list-inside text-lg text-gray-700 dark:text-gray-300">
+        <li>
+          <span class="text-slate-700 dark:text-gray-400 font-bold">Datos:</span>
+          <span class="ml-2">Hechos que describen características de objetos, eventos o personas. Es la materia prima de la cual se obtendra la información.</span>
+        </li>
+        <li>
+          <span class="text-slate-700 dark:text-gray-400 font-bold">Información:</span>
+          <span class="ml-2">Datos procesados y presentados en forma adecuada, de interés para un observador en un tiempo determinado.</span>
+        </li>
+      </ol>
+    </div><!--.container principal. -->
+
     <!-- Script para alternar modo oscuro -->
     <script src="../js/app.js"></script>
   </body>
