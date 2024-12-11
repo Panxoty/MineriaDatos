@@ -1,67 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Documentación | Minería de Datos</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            darkMode: 'class', // Habilitar el modo oscuro basado en clases
-        };
+      tailwind.config = {
+        darkMode: "class", // Habilitar el modo oscuro basado en clases
+      };
     </script>
-</head>
+  </head>
 
-<body class="bg-gray-100 dark:bg-gray-900 dark:text-gray-100">
+  <body class="bg-gray-100 dark:bg-gray-900 dark:text-gray-100">
     <nav class="bg-white dark:bg-gray-800 shadow-md">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Título logo -->
-                <a href="/" class="text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-700">DataMining</a>
-                <!-- Navegación -->
-                <div class="hidden md:flex space-x-7 items-center">
-                    <a href="/" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Inicio</a>
-                    <a href="../Pages/documentacion.html" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Documentación</a>
-                    <a href="../Pages/comparativa.html" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Comparativa</a>
-                    <a href="../Pages/videos.html" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">Videos</a>
-                    <!-- Botón para alternar modo oscuro -->
-                    <button id="dark-mode-toggle"
-                        class="ml-4 w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 shadow-lg hover:scale-110 transition-all duration-300 focus:outline-none ">
-                        <span id="dark-mode-icon" class="text-gray-700 dark:text-gray-300 text-lg">🌙</span>
-                    </button>
-                </div>
-                <!-- Botón menú móvil -->
-                <div class="md:hidden">
-                    <button id="menu-button" class="text-gray-800 dark:text-gray-300 focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Título logo -->
+          <a
+            href="/"
+            class="text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-700"
+            >DataMining</a
+          >
+          <!-- Navegación -->
+          <div class="hidden md:flex space-x-7 items-center">
+            <a
+              href="/"
+              class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
+              >Inicio</a
+            >
+            <a
+              href="../Pages/documentacion.html"
+              class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
+              >Documentación</a
+            >
+            <a
+              href="../Pages/comparativa.html"
+              class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
+              >Comparativa</a
+            >
+            <a
+              href="../Pages/videos.html"
+              class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
+              >Videos</a
+            >
+            <!-- Botón para alternar modo oscuro -->
+            <button
+              id="dark-mode-toggle"
+              class="ml-4 w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 shadow-lg hover:scale-110 transition-all duration-300 focus:outline-none"
+            >
+              <span
+                id="dark-mode-icon"
+                class="text-gray-700 dark:text-gray-300 text-lg"
+                >🌙</span
+              >
+            </button>
+          </div>
+          <!-- Botón menú móvil -->
+          <div class="md:hidden">
+            <button
+              id="menu-button"
+              class="text-gray-800 dark:text-gray-300 focus:outline-none"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
         </div>
-        <!-- Menú desplegable móvil -->
-        <div id="mobile-menu" class="md:hidden hidden dark:bg-gray-800">
-            <a href="/"
-                class="block px-4 py-2 text-gray-700 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700">Inicio</a>
-            <a href="/Pages/documentacion.html"
-                class="block px-4 py-2 text-gray-700 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700">Documentación</a>
-            <a href="/Pages/comparativa.html"
-                class="block px-4 py-2 text-gray-700 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700">Comparativa</a>
-            <a href="/Pages/videos.html"
-                class="block px-4 py-2 text-gray-700 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700">Videos</a>
-        </div>
-    </nav> <!--HASTA AQUI -->
+      </div>
+      <!-- Menú desplegable móvil -->
+      <div id="mobile-menu" class="md:hidden hidden dark:bg-gray-800">
+        <a
+          href="/"
+          class="block px-4 py-2 text-gray-700 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700"
+          >Inicio</a
+        >
+        <a
+          href="/Pages/documentacion.html"
+          class="block px-4 py-2 text-gray-700 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700"
+          >Documentación</a
+        >
+        <a
+          href="/Pages/comparativa.html"
+          class="block px-4 py-2 text-gray-700 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700"
+          >Herramientas</a
+        >
+        <a
+          href="/Pages/videos.html"
+          class="block px-4 py-2 text-gray-700 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700"
+          >Videos</a
+        >
+      </div>
+    </nav>
+    <!--HASTA AQUI -->
     <!-- Sección Información -->
     <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center md:mb-0">Bienvenido a la
-            plataforma Educativa DataMining.</h1>
-        <p class="text-gray-500 dark:text-gray-400 text-center mt-1">Aprenderás conceptos claves, herramientas y
-            obtendrás acceso a recursos como apoyo.</p>
+      <h1
+        class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center md:mb-0"
+      >
+        Bienvenido a la plataforma Educativa DataMining.
+      </h1>
+      <p class="text-gray-500 dark:text-gray-400 text-center mt-1">
+        Aprenderás conceptos claves, herramientas y obtendrás acceso a recursos
+        como apoyo.
+      </p>
     </div>
     <!-- Script para alternar modo oscuro -->
     <script src="js/app.js"></script>
-</body>
+  </body>
 </html>
