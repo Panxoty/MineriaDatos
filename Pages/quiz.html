@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Interactivo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div
+      class="quiz-container bg-white p-8 rounded-lg shadow-lg w-full max-w-lg"
+    >
+      <h1 class="text-2xl font-bold mb-6">Quiz Interactivo</h1>
+      <div id="quiz"></div>
+      <button
+        id="next-btn"
+        class="bg-green-500 text-white py-2 px-4 rounded mt-6 hidden"
+      >
+        Siguiente
+      </button>
+      <a href="/" class="ml-72 text-gray-700 hover:text-blue-600">Volver</a>
+      <button
+        id="submit-btn"
+        class="bg-green-500 text-white py-2 px-4 rounded mt-6 hidden"
+      >
+        Enviar
+      </button>
+      <button
+        id="restart-btn"
+        class="bg-blue-500 text-white py-2 px-4 rounded mt-6 hidden"
+      >
+        Reiniciar
+      </button>
+      <div id="result" class="mt-6 text-xl font-semibold hidden"></div>
+    </div>
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center hidden"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
+        <h2 class="text-xl font-bold mb-4">Mensaje</h2>
+        <p id="modal-message" class="mb-4"></p>
+        <button
+          id="modal-close-btn"
+          class="bg-blue-500 text-white py-2 px-4 rounded"
+        >
+          Cerrar
+        </button>
+      </div>
+    </div>
+
+    <script src="../js/quiz.js"></script>
+  </body>
+</html>
