@@ -34,7 +34,6 @@ function updateIcon() {
     const isDarkMode = htmlElement.classList.contains('dark');
     darkModeIcon.textContent = isDarkMode ? '☀️' : '🌙';
 }
-
 // Event Listener para el botón
 darkModeToggle.addEventListener('click', toggleTheme);
 
