@@ -260,6 +260,9 @@ function showResult() {
     document.getElementById('next-btn').classList.add('hidden');
     document.getElementById('submit-btn').classList.add('hidden');
     document.getElementById('restart-btn').classList.remove('hidden');
+    
+    // Scroll to the bottom of the quiz container to show the last question
+    quizContainer.scrollTop = quizContainer.scrollHeight;
 }
 
 function restartQuiz() {
