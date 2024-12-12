@@ -1,3 +1,4 @@
+// Conjunto de datos que contiene las preguntas del cuestionario, opciones y respuestas correctas
 const dataset = [
     {
         question: "¿Qué es la minería de datos?",
@@ -155,21 +156,33 @@ const dataset = [
     }
 ];
 
+// Índice de la pregunta actual
 let currentQuestionIndex = 0;
+// Puntuación del usuario
 let score = 0;
+// Respuestas del usuario
 let userAnswers = [];
 
+/**
+ * Carga la pregunta actual en el contenedor del cuestionario.
+ */
 function loadQuestion() {
+    // Obtiene el contenedor del cuestionario
     const quizContainer = document.getElementById('quiz');
+    // Limpia el contenido del contenedor
     quizContainer.innerHTML = '';
+    // Obtiene los datos de la pregunta actual
     const data = dataset[currentQuestionIndex];
+    // Crea un elemento div para la pregunta
     const questionElement = document.createElement('div');
     questionElement.classList.add('question', 'mb-4');
     questionElement.innerHTML = `<h2 class="text-lg font-semibold mb-2">${data.question}</h2>`;
     
+    // Crea una lista para las opciones
     const optionsList = document.createElement('ul');
     optionsList.classList.add('options', 'list-none', 'p-0');
     
+    // Añade cada opción a la lista
     data.options.forEach((option, i) => {
         const optionItem = document.createElement('li');
         optionItem.classList.add('mb-2');
@@ -177,24 +190,36 @@ function loadQuestion() {
         optionsList.appendChild(optionItem);
     });
     
+    // Añade la lista de opciones al elemento de la pregunta
     questionElement.appendChild(optionsList);
+    // Añade el elemento de la pregunta al contenedor del cuestionario
     quizContainer.appendChild(questionElement);
     
+    // Muestra el botón de siguiente y oculta el botón de enviar
     document.getElementById('next-btn').classList.remove('hidden');
     document.getElementById('submit-btn').classList.add('hidden');
 }
 
+/**
+ * Avanza a la siguiente pregunta del cuestionario.
+ */
 function nextQuestion() {
+    // Obtiene la opción seleccionada por el usuario
     const selectedOption = document.querySelector(`input[name="question"]:checked`);
     if (selectedOption) {
+        // Guarda la respuesta del usuario
         userAnswers[currentQuestionIndex] = parseInt(selectedOption.value);
+        // Incrementa la puntuación si la respuesta es correcta
         if (userAnswers[currentQuestionIndex] === dataset[currentQuestionIndex].answer) {
             score++;
         }
+        // Avanza a la siguiente pregunta
         currentQuestionIndex++;
+        // Carga la siguiente pregunta si hay más preguntas
         if (currentQuestionIndex < dataset.length) {
             loadQuestion();
         } else {
+            // Muestra el resultado si no hay más preguntas
             showResult();
         }
     } else {
@@ -202,6 +227,9 @@ function nextQuestion() {
     }
 }
 
+/**
+ * Muestra el resultado del cuestionario.
+ */
 function showResult() {
     const quizContainer = document.getElementById('quiz');
     quizContainer.innerHTML = '';
