@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gráficos Interactivos</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body
+    class="bg-gray-100 flex flex-col items-center justify-center min-h-screen"
+  >
+    <div class="container mx-auto p-4">
+      <h1 class="text-2xl font-bold mb-4">Gráficos Interactivos</h1>
+      <div class="flex flex-col space-y-4">
+        <div class="bg-white p-4 rounded shadow">
+          <canvas id="barChart"></canvas>
+          <button
+            id="randomizeBarData"
+            class="bg-blue-500 text-white px-4 py-2 rounded mt-4"
+          >
+            Randomizar Ventas
+          </button>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <canvas id="lineChart"></canvas>
+          <button
+            id="randomizeLineData"
+            class="bg-blue-500 text-white px-4 py-2 rounded mt-4"
+          >
+            Randomizar Accidentes
+          </button>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <canvas id="pieChart"></canvas>
+          <button
+            id="randomizePieData"
+            class="bg-blue-500 text-white px-4 py-2 rounded mt-4"
+          >
+            Randomizar Enfermedades
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
